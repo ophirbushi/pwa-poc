@@ -1,0 +1,19 @@
+{
+  "name": "pwa-poc",
+  "version": "1.0.0",
+  "description": "poc of a pwa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ophirbushi/pwa-poc.git"
+  },
+  "author": "Ophir Bushinsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ophirbushi/pwa-poc/issues"
+  },
+  "homepage": "https://github.com/ophirbushi/pwa-poc#readme"
+}
