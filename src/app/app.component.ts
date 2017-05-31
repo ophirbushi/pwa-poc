@@ -59,6 +59,10 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
+  onCloseDialogClick(): void {
+    this.dialog.closeAll();
+  }
+
   private getUserData = (login: string): void => {
     this.userService
       .get(login)

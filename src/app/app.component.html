@@ -4,7 +4,10 @@
   <button md-icon-button (click)="onAddClick()">
     <md-icon>add</md-icon>
     <ng-template #addUserDialog>
-      <form (ngSubmit)="onAddUserSubmit(addUserInput)">
+       <button md-icon-button class="close-dialog-btn" type="button" (click)="onCloseDialogClick()">
+          <md-icon>close</md-icon>
+      </button>
+      <form (ngSubmit)="onAddUserSubmit(addUserInput)">      
         <md-input-container class="example-full-width">
           <input mdInput placeholder="Add a Github User" name="addedUser" required ngModel #addUserInput="ngModel">
         </md-input-container>
