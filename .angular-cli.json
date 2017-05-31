@@ -10,6 +10,7 @@
             "assets": [
                 "assets",
                 "favicon.ico",
+                "custom-sw.js",
                 "manifest.json",
                 {
                     "glob": "**/*",

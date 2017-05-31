@@ -9,5 +9,6 @@ module.exports = {
     ],
     root: 'dist',
     stripPrefix: 'dist/',
+    importScripts: ['custom-sw.js'],
     navigateFallback: '/index.html'
 };
