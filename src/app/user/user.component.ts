@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { User } from '../user.model';
 
@@ -9,4 +9,13 @@ import { User } from '../user.model';
 })
 export class UserComponent {
   @Input() user: User;
+  @Output() removeClick: EventEmitter<any> = new EventEmitter();
+
+  onVisitPageClick(): void {
+    window.open(this.user.html_url, '_blank');
+  }
+
+  onRemoveClick(): void {
+    this.removeClick.emit(this.user);
+  }
 }

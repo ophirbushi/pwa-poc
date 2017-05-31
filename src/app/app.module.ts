@@ -8,10 +8,10 @@ import { MaterialModule } from '@angular/material';
 import 'rxjs/add/operator/takeUntil';
 import 'hammerjs';
 
+import { StorageService } from './storage.service';
 import { UserService } from './user.service';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-
 
 @NgModule({
   declarations: [
@@ -25,7 +25,10 @@ import { UserComponent } from './user/user.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [UserService],
+  providers: [
+    StorageService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

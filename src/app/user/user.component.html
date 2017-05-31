@@ -1,16 +1,18 @@
 <md-card class="user-card" *ngIf="user">
+  <button md-icon-button class="remove-btn" (click)="onRemoveClick()">
+    <md-icon>close</md-icon>
+  </button>
   <md-card-header>
     <img md-card-avatar [src]="user.avatar_url" [title]="user.login" />
     <md-card-title>{{ user.login }}</md-card-title>
   </md-card-header>
   <md-card-content>
-    <ul>
-      <li> Created At: {{ user.created_at | date }} </li>
-      <li> Followers: {{ user.followers }} </li>
-    </ul>
+    <md-list dense>
+      <md-list-item> Created At: {{ user.created_at | date }} </md-list-item>
+      <md-list-item> Followers: {{ user.followers }} </md-list-item>
+    </md-list>
   </md-card-content>
   <md-card-actions>
-    <button md-button>LIKE</button>
-    <button md-button>SHARE</button>
+    <button md-button (click)="onVisitPageClick()">VISIT PAGE</button>
   </md-card-actions>
 </md-card>

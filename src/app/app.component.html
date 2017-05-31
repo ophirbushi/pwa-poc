@@ -1,12 +1,23 @@
 <md-toolbar color="primary">
   <span>MyApp</span>
   <span class="flex-spacer"></span>
-  <button md-icon-button>
-    <md-icon>refresh</md-icon>
-  </button>
-  <button md-icon-button>
+  <button md-icon-button (click)="onAddClick()">
     <md-icon>add</md-icon>
+    <ng-template #addUserDialog>
+      <form (ngSubmit)="onAddUserSubmit(addUserInput)">
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Add a Github User" name="addedUser" required ngModel #addUserInput="ngModel">
+        </md-input-container>
+        <md-dialog-actions>
+          <button md-button type="submit" [disabled]="addUserInput?.invalid" class="add-user-submit-btn">SUBMIT</button>
+        </md-dialog-actions>
+      </form>
+    </ng-template>
   </button>
 </md-toolbar>
 
-<pwp-user *ngFor="let user of users" [user]="user"></pwp-user>
+<div class="no-users-message" *ngIf="!logins.length">
+  Click on the + to add Github users you wish to follow.
+</div>
+
+<pwp-user *ngFor="let user of users; let i = index;" [user]="user" (removeClick)="onUserRemoveClick(i)"></pwp-user>
