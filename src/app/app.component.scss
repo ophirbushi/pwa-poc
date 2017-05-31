@@ -4,11 +4,11 @@
 
 .toolbar-icon {
     cursor: pointer;
-    padding: 0 14px;
+    padding: 0 1em;
 }
 
 pwp-user{
-    padding: 14px;
+    padding: 1em;
 }
 
 .add-user-submit-btn{
@@ -16,8 +16,12 @@ pwp-user{
 }
 
 .no-users-message{
-    margin: 20px auto;
+    padding: 1em;
+    margin: 2em auto;
+    line-height: 1.4;
     display: table;
+    cursor: default;
+    user-select: none;
 }
 
 .close-dialog-btn {
