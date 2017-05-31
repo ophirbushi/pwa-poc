@@ -1,0 +1,30 @@
+{
+    "short_name": "PocPwa",
+    "name": "POC of a Progressive Web App",
+    "icons": [
+        {
+            "src": "assets/icon_48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "assets/icon_96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "assets/icon_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/icon_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "display": "standalone",
+    "background_color": "#41567F",
+    "theme_color": "#3f51b5",
+    "start_url": "/?utm_source=homescreen"
+}
