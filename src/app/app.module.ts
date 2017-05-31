@@ -5,26 +5,27 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+import 'rxjs/add/operator/takeUntil';
 import 'hammerjs';
 
-import { AppRoutingModule } from './app-routing.module';
+import { UserService } from './user.service';
 import { AppComponent } from './app.component';
-
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,16 @@
+<md-card class="user-card" *ngIf="user">
+  <md-card-header>
+    <img md-card-avatar [src]="user.avatar_url" [title]="user.login" />
+    <md-card-title>{{ user.login }}</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <ul>
+      <li> Created At: {{ user.created_at | date }} </li>
+      <li> Followers: {{ user.followers }} </li>
+    </ul>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
